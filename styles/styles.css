@@ -1,0 +1,40 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+:root {
+    --unique-font: 'Space Mono', monospace;
+    --font-size: 14px;
+    --mobile-screen: 375px;
+    --desktop-screen: 1440px;
+    --primary: #1db489;
+    --secondary: #dc414c;
+/* ------------------ Redes ------------------ */
+    --facebook: #198ff5;
+    --twitter: #1ca0f2;
+    --instagram: linear-gradient(#fdc468, #df4996);
+    --youTube: #c4032a;
+/* ----------------- Dark Theme -----------------*/
+    --dark-toggle: linear-gradient(#378fe6, #3eda82);
+    --dark-BG: #1e202a;
+    --dark-top-BG-pattern: #1f212e;
+    --dark-card-BG: #252a41;
+    --dark-text: #8b97c6;
+    --dark-text-number: #ffffff;
+/* ---------------- light theme ---------------- */
+    --light-toggle: #aeb3cb;
+    --light-BG: #ffffff;
+    --light-top-BG-pattern: #f5f7ff;
+    --light-card-BG: #f0f2fa;
+    --light-text: #63687e;
+    --light-text-number: #1e202a;
+}
+
+body {
+    background: linear-gradient(to bottom, var(--dark-top-BG-pattern) 25%, var(--dark-BG) 25% 100%);
+    height: 90vh;
+}
