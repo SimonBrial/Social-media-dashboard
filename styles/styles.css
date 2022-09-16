@@ -19,7 +19,7 @@ html {
     --instagram: linear-gradient(#fdc468, #df4996);
     --youTube: #c4032a;
 /* ----------------- Dark Theme -----------------*/
-    --dark-toggle: linear-gradient(#378fe6, #3eda82);
+    --dark-toggle: linear-gradient(to right, #378fe6, #3eda82);
     --dark-BG: #1e202a;
     --dark-top-BG-pattern: #1f212e;
     --dark-card-BG: #252a41;
@@ -37,4 +37,85 @@ html {
 body {
     background: linear-gradient(to bottom, var(--dark-top-BG-pattern) 25%, var(--dark-BG) 25% 100%);
     height: 90vh;
+}
+
+.header {
+    margin: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-media {
+    color: #fff;
+    font-family:  var(--unique-font);
+    margin: 1rem 0 -0.1rem 0;
+    font-size: 2.2rem;
+}
+
+.followers {
+    color: var(--dark-text);
+    margin: -0.5rem 0 0 0;
+    font-family:  var(--unique-font);
+    font-size: 1rem;
+}
+
+.theme {
+    display: flex;
+    align-items: center;
+}
+
+.mode {
+    margin: 0.1rem 1rem;
+    font-family: var(--unique-font);
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: #fff;
+}
+
+.btn-toggle {
+    position: relative;
+    display: inline-block;
+    width: 4rem;
+    height: 2.1rem;
+}
+
+.btn-toggle input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle2 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--dark-toggle);
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.toggle2:before {
+    position: absolute;
+    content: '';
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background: var(--dark-top-BG-pattern);
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input[type="checkbox"]:focus +.toggle2 {
+    box-shadow: 0 0 1px #ffffff;
+}
+
+input[type="checkbox"]:checked + .toggle2:before  {
+    transform: translateX(1.85rem);
+    border: 24px;
+    border-color: #fff;
+    background: var(--light-card-BG);
 }
