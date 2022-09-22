@@ -16,7 +16,7 @@ html {
 /* ------------------ Redes ------------------ */
     --facebook: #198ff5;
     --twitter: #1ca0f2;
-    --instagram: linear-gradient(#fdc468, #df4996);
+    --instagram: linear-gradient(to right, #fdc468, #df4996);
     --youTube: #c4032a;
 /* ----------------- Dark Theme -----------------*/
     --dark-toggle: linear-gradient(to right, #378fe6, #3eda82);
@@ -118,4 +118,160 @@ input[type="checkbox"]:checked + .toggle2:before  {
     border: 24px;
     border-color: #fff;
     background: var(--light-card-BG);
+}
+
+main {
+    margin: 2rem 7rem;
+}
+
+.cards-area-up {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card {
+    width: 15rem;
+    height: 14rem;
+    margin: 1rem 0.5rem;
+    border-radius: 5px;
+    padding: 2rem 5rem;
+    background: #252a41;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.border-top-facebook {
+    position: absolute;
+    width: 15rem;
+    height: 7px;
+    border-radius: 5px 5px 0 0;
+    background-color: var(--facebook);
+    margin-top: -1.9rem;
+    margin-left: 0;
+
+}
+.border-top-twitter {
+    position: absolute;
+    width: 15rem;
+    height: 7px;
+    border-radius: 5px 5px 0 0;
+    background-color: var(--twitter);
+    margin-top: -1.9rem;
+    margin-left: 0;
+
+}
+.border-top-instagram {
+    position: absolute;
+    width: 15rem;
+    height: 7px;
+    border-radius: 5px 5px 0 0;
+    background: var(--instagram);
+    margin-top: -1.9rem;
+    margin-left: 0;
+
+}
+.border-top-youtube {
+    position: absolute;
+    width: 15rem;
+    height: 7px;
+    border-radius: 5px 5px 0 0;
+    background-color: var(--youTube);
+    margin-top: -1.9rem;
+    margin-left: 0;
+
+}
+
+.card:hover {
+    background: #252a41;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 1rem;
+}
+
+.facebook-img{
+    width: 22px;
+    height: 22px;
+    margin: 0 1rem;
+}
+
+.twitter-img{
+    width: 22px;
+    height: 22px;
+    margin: 0 1rem;
+}
+
+.instagram-img{
+    width: 22px;
+    height: 22px;
+    margin: 0 1rem;
+}
+
+.facebook-img{
+    width: 22px;
+    height: 22px;
+    margin: 0 1rem;
+}
+
+.symbol {
+    font-size: 1.1rem;
+    color: var(--dark-text);
+}
+
+.social-user {
+    color: var(--dark-text);
+    font-family: var(--unique-font);
+    font-size: 0.8rem;
+    text-transform: capitalize;
+}
+
+.number {
+    color: var(--dark-text-number);
+    font-family: var(--unique-font);
+    margin-top: -1rem;
+}
+.followers-number {
+    text-align: center;
+}
+
+.number>p {
+    text-transform: uppercase;
+    margin-top: -1.5rem;
+    letter-spacing: 0.5rem;
+    color: var(--dark-text);
+}
+
+.today {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    font-family: var(--unique-font);
+    color: #1db489;
+}
+
+.today img {
+    width: 10px;
+    height: 5px;
+    margin: 0 0.5rem;
+}
+
+.today-number {
+    font-size: 0.6rem;
+    word-spacing: -0.2rem;
+}
+
+.today-number-youtube {
+    color: #c4032a;
+    font-size: 0.6rem;
+    word-spacing: -0.2rem;
+}
+.upArrow-icon {
+    color: var(--youTube);
+    transform: rotateY(90deg) ;
 }
