@@ -36,7 +36,7 @@ html {
 
 body {
     background: linear-gradient(to bottom, var(--dark-top-BG-pattern) 25%, var(--dark-BG) 25% 100%);
-    height: 90vh;
+    height: 97vh;
 }
 
 .header {
@@ -45,10 +45,16 @@ body {
     justify-content: space-between;
 }
 
+@media only screen and (max-width: 800px) {
+    .header {
+        flex-direction: column;
+    }
+}
+
 .social-media {
     color: #fff;
     font-family:  var(--unique-font);
-    margin: 1rem 0 -0.1rem 0;
+    margin: 0rem 0 -0.1rem 0;
     font-size: 2.2rem;
 }
 
@@ -64,12 +70,24 @@ body {
     align-items: center;
 }
 
+@media only screen and (max-width: 800px) {
+    .theme {
+        margin-top: 1rem;
+    }
+}
+
 .mode {
-    margin: 0.1rem 1rem;
+    margin: 0.1rem 0.4rem 0.1rem 0;
     font-family: var(--unique-font);
-    font-size: 1.35rem;
+    font-size: 1.2rem;
     font-weight: 400;
     color: #fff;
+}
+
+@media only screen and (max-width: 800px) {
+    .mode {
+        margin-left: 0;
+    }
 }
 
 .btn-toggle {
@@ -121,14 +139,21 @@ input[type="checkbox"]:checked + .toggle2:before  {
 }
 
 main {
-    margin: 2rem 7rem;
+    margin: 2rem 6rem;
 }
 
-.cards-area-up {
+.cards-area {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 718px) {
+    .cards-area {
+        justify-content: center;
+    }
 }
 
 .card {
@@ -143,6 +168,13 @@ main {
     flex-direction: column;
     align-items: center;
 }
+
+.card:hover {
+    cursor: pointer;
+    background: #293258;
+    transition: all 0.5s ease-in-out;
+}
+
 .border-top-facebook {
     position: absolute;
     width: 15rem;
@@ -151,8 +183,8 @@ main {
     background-color: var(--facebook);
     margin-top: -1.9rem;
     margin-left: 0;
-
 }
+
 .border-top-twitter {
     position: absolute;
     width: 15rem;
@@ -161,8 +193,8 @@ main {
     background-color: var(--twitter);
     margin-top: -1.9rem;
     margin-left: 0;
-
 }
+
 .border-top-instagram {
     position: absolute;
     width: 15rem;
@@ -171,8 +203,8 @@ main {
     background: var(--instagram);
     margin-top: -1.9rem;
     margin-left: 0;
-
 }
+
 .border-top-youtube {
     position: absolute;
     width: 15rem;
@@ -181,11 +213,6 @@ main {
     background-color: var(--youTube);
     margin-top: -1.9rem;
     margin-left: 0;
-
-}
-
-.card:hover {
-    background: #252a41;
 }
 
 .user {
@@ -224,6 +251,14 @@ main {
     color: var(--dark-text);
 }
 
+.social-user-facebook {
+    color: var(--dark-text);
+    font-family: var(--unique-font);
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    width: 7rem;
+}
+
 .social-user {
     color: var(--dark-text);
     font-family: var(--unique-font);
@@ -234,15 +269,17 @@ main {
 .number {
     color: var(--dark-text-number);
     font-family: var(--unique-font);
-    margin-top: -1rem;
+    margin-top: -3rem;
 }
+
 .followers-number {
     text-align: center;
+    font-size: 3.5rem;
 }
 
 .number>p {
     text-transform: uppercase;
-    margin-top: -1.5rem;
+    margin-top: -3rem;
     letter-spacing: 0.5rem;
     color: var(--dark-text);
 }
@@ -255,10 +292,13 @@ main {
     color: #1db489;
 }
 
-.today img {
+.up-Arrow {
     width: 10px;
-    height: 5px;
-    margin: 0 0.5rem;
+    height: 10px;
+    margin-right: 0.5rem;
+    fill: #1db489;
+    transform: rotate(-90deg);
+    font-family: var(--unique-font);
 }
 
 .today-number {
@@ -271,7 +311,72 @@ main {
     font-size: 0.6rem;
     word-spacing: -0.2rem;
 }
-.upArrow-icon {
-    color: var(--youTube);
-    transform: rotateY(90deg) ;
+.down-Arrow {
+    width: 10px;
+    height: 10px;
+    margin-right: 0.5rem;
+    fill: #c4032a;
+    transform: rotate(90deg);
+    font-family: var(--unique-font);
+}
+
+.overview-title {
+    font-family: var(--unique-font);
+    color: #fff;
+}
+
+.card-overview {
+    width: 15rem;
+    height: 8rem;
+    margin: 1rem 0.5rem;
+    border-radius: 5px;
+    padding: 2rem 5rem;
+    background: #252a41;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-overview:hover {
+    cursor: pointer;
+    background: #293258;
+    transition: all 0.5s ease-in-out;
+}
+
+.description-overview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 12rem;
+    margin: -1.5rem 0;
+}
+
+.pages-description {
+    font-family: var(--unique-font);
+    color: var(--dark-text);
+    font-weight: bold;
+    word-spacing: -5px;
+}
+
+.number-description-overview {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 12rem;
+    margin: -0.4rem 0;
+}
+
+.number-overview {
+    font-size: 2rem;
+    font-family: var(--unique-font);
+    color: #fff;
+}
+
+.icon-number {
+    display: flex;
+    align-items: center;
+}
+
+.icon-number .today-number {
+    color: #1db489;
 }
