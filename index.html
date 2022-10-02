@@ -5,34 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Media Dashboard</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="styles/principalStyles.css">
+    <link rel="stylesheet" href="styles/themeMode.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="body-contain-light" id="container">
     <header class="header">
         <div class="total-followers">
-            <h1 class="social-media">Social Media Dashboard</h1>
-            <h3 class="followers">
-                Total Followers: 23.004<span id="total"></span>
+            <h1 id="h1Font" class="social-media ">Social Media Dashboard</h1>
+            <h3 class="title followers light-font-p">
+                Total Followers: 23.004
             </h3>
         </div>
         <div class="theme">
             <p class="mode" id="theme">
                 Dark Mode
             </p>
-            <label class="btn-toggle">
+            <label id="switch" class="btn-toggle">
                 <input type="checkbox">
                 <span class="toggle2"></span>
             </label>
         </div>
     </header>
     <main class="container">
-        <div class="cards-area">
-            <div class="card">
-                <span class="border-top-facebook"></span>
+        <div id="cardsArea" class="cards-area">
+            <div class="card card-bg-light cards">
+                <span class="border-top top-facebook"></span>
                 <div class="user">
                     <img src="./img/icon-facebook.svg" alt="facebookIcon" class="facebook-img">
                     <p class="social-user-facebook">Simon Briceño</p>
@@ -48,8 +48,8 @@
                     <p class="today-number">12 Today</p>
                 </div>
             </div>
-            <div class="card">
-                <span class="border-top-twitter"></span>
+            <div class="card card-bg-light cards">
+                <span class="border-top top-twitter "></span>
                 <div class="user">
                     <img src="./img/icon-twitter.svg" alt="facebookIcon" class="twitter-img">
                     <span class="symbol">@</span><p class="social-user">simonbrail</p>
@@ -65,8 +65,8 @@
                     <p class="today-number">99 Today</p>
                 </div>
             </div>
-            <div class="card">
-                <span class="border-top-instagram"></span>
+            <div class="card card-bg-light cards">
+                <span class="border-top top-instagram"></span>
                 <div class="user">
                     <img src="./img/icon-instagram.svg" alt="facebookIcon" class="instagram-img">
                     <span class="symbol">@</span><p class="social-user">simonbrail96</p>
@@ -82,8 +82,8 @@
                     <p class="today-number">1099 Today</p>
                 </div>
             </div>
-            <div class="card">
-                <span class="border-top-youtube"></span>
+            <div class="card card-bg-light cards">
+                <span class="border-top top-youtube"></span>
                 <div class="user">
                     <img src="./img/icon-youtube.svg" alt="facebookIcon" class="facebook-img">
                     <p class="social-user">simonbrail</p>
@@ -101,16 +101,16 @@
             </div>
         </div>
         <div>
-            <h1 class="overview-title">Overview - Today</h1>
+            <h1 id="title" class="title light-font-p">Overview - Today</h1>
         </div>
         <div class="cards-area">
-            <div class="card-overview">
+            <div class="card-overview card-bg-light cards">
                 <div class="description-overview">
-                    <p class="pages-description">Pages View</p>
+                    <p class="pages-description light-font-p">Pages View</p>
                     <img src="./img/icon-facebook.svg" alt="facebook" class="facebook-img-ov">
                 </div>
                 <div class="number-description-overview">
-                    <p class="number-overview">87</p>
+                    <p class="number-overview light-font-h1">87</p>
                     <div class="icon-number">
                         <svg class="up-Arrow"  xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="yellow" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polygon points="5 3 19 12 5 21 5 3"></polygon>
@@ -120,13 +120,13 @@
                     
                 </div>
             </div>
-            <div class="card-overview">
+            <div class="card-overview card-bg-light cards">
                 <div class="description-overview">
-                    <p class="pages-description">Likes</p>
+                    <p class="pages-description light-font-p">Likes</p>
                     <img src="./img/icon-facebook.svg" alt="facebook" class="facebook-img-ov">
                 </div>
                 <div class="number-description-overview">
-                    <p class="number-overview">52</p>
+                    <p class="number-overview light-font-h1">52</p>
                     <div class="icon-number">
                         <svg class="down-Arrow"  xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="yellow" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polygon points="5 3 19 12 5 21 5 3"></polygon>
@@ -136,13 +136,13 @@
                     
                 </div>
             </div>
-            <div class="card-overview">
+            <div class="card-overview card-bg-light cards">
                 <div class="description-overview">
-                    <p class="pages-description">Likes</p>
+                    <p class="pages-description light-font-p">Likes</p>
                     <img src="./img/icon-instagram.svg" alt="facebook" class="instagram-img-ov">
                 </div>
                 <div class="number-description-overview">
-                    <p class="number-overview">5462</p>
+                    <p class="number-overview light-font-h1">5462</p>
                     <div class="icon-number">
                         <svg class="up-Arrow"  xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="yellow" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polygon points="5 3 19 12 5 21 5 3"></polygon>
@@ -151,13 +151,13 @@
                     </div>
                 </div>
             </div>
-            <div class="card-overview">
+            <div class="card-overview card-bg-light cards">
                 <div class="description-overview">
-                    <p class="pages-description">Profile Views</p>
+                    <p class="pages-description light-font-p">Profile Views</p>
                     <img src="./img/icon-instagram.svg" alt="facebook" class="facebook-img-ov">
                 </div>
                 <div class="number-description-overview">
-                    <p class="number-overview">52k</p>
+                    <p class="number-overview light-font-h1">52k</p>
                     <div class="icon-number">
                         <svg class="up-Arrow"  xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="yellow" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polygon points="5 3 19 12 5 21 5 3"></polygon>
@@ -167,13 +167,13 @@
                     
                 </div>
             </div>
-            <div class="card-overview">
+            <div class="card-overview card-bg-light cards">
                 <div class="description-overview">
-                    <p class="pages-description">Retweets</p>
+                    <p class="pages-description light-font-p">Retweets</p>
                     <img src="./img/icon-twitter.svg" alt="facebook" class="twitter-img-ov">
                 </div>
                 <div class="number-description-overview">
-                    <p class="number-overview">117</p>
+                    <p class="number-overview light-font-h1">117</p>
                     <div class="icon-number">
                         <svg class="up-Arrow"  xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="yellow" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polygon points="5 3 19 12 5 21 5 3"></polygon>
@@ -183,13 +183,13 @@
                     
                 </div>
             </div>
-            <div class="card-overview">
+            <div class="card-overview card-bg-light cards">
                 <div class="description-overview">
-                    <p class="pages-description">Likes</p>
+                    <p class="pages-description light-font-p">Likes</p>
                     <img src="./img/icon-twitter.svg" alt="facebook" class="facebook-img-ov">
                 </div>
                 <div class="number-description-overview">
-                    <p class="number-overview">507</p>
+                    <p class="number-overview light-font-h1">507</p>
                     <div class="icon-number">
                         <svg class="up-Arrow"  xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="yellow" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polygon points="5 3 19 12 5 21 5 3"></polygon>
@@ -199,13 +199,13 @@
                     
                 </div>
             </div>
-            <div class="card-overview">
+            <div class="card-overview card-bg-light cards">
                 <div class="description-overview">
-                    <p class="pages-description">Likes</p>
+                    <p class="pages-description light-font-p">Likes</p>
                     <img src="./img/icon-youtube.svg" alt="facebook" class="youtube-img-ov">
                 </div>
                 <div class="number-description-overview">
-                    <p class="number-overview">107</p>
+                    <p class="number-overview light-font-h1">107</p>
                     <div class="icon-number">
                         <svg class="down-Arrow"  xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="yellow" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polygon points="5 3 19 12 5 21 5 3"></polygon>
@@ -214,13 +214,13 @@
                     </div>
                 </div>
             </div>
-            <div class="card-overview">
+            <div class="card-overview card-bg-light cards">
                 <div class="description-overview">
-                    <p class="pages-description">Total Views</p>
+                    <p class="pages-description light-font-p">Total Views</p>
                     <img src="./img/icon-youtube.svg" alt="facebook" class="youtube-img-ov">
                 </div>
                 <div class="number-description-overview">
-                    <p class="number-overview">1407</p>
+                    <p class="number-overview light-font-h1">1407</p>
                     <div class="icon-number">
                         <svg class="down-Arrow"  xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="yellow" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polygon points="5 3 19 12 5 21 5 3"></polygon>
@@ -232,5 +232,6 @@
             </div>
         </div>
     </main>
+    <script src="js/app.js"></script>
 </body>
 </html>

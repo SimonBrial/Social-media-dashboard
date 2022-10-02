@@ -22,6 +22,7 @@ html {
     --dark-toggle: linear-gradient(to right, #378fe6, #3eda82);
     --dark-BG: #1e202a;
     --dark-top-BG-pattern: #1f212e;
+    --dark-hover: #383f61;
     --dark-card-BG: #252a41;
     --dark-text: #8b97c6;
     --dark-text-number: #ffffff;
@@ -29,14 +30,52 @@ html {
     --light-toggle: #aeb3cb;
     --light-BG: #ffffff;
     --light-top-BG-pattern: #f5f7ff;
+    --light-hover: #e5eefa;
     --light-card-BG: #f0f2fa;
     --light-text: #63687e;
     --light-text-number: #1e202a;
 }
 
-body {
+/* -------------------------------- */
+
+.body-contain-light {
+    background: linear-gradient(to bottom, var(--light-top-BG-pattern) 25%, var(--light-BG) 25% 100%);
+}
+
+.body-contain-dark {
     background: linear-gradient(to bottom, var(--dark-top-BG-pattern) 25%, var(--dark-BG) 25% 100%);
-    height: 97vh;
+}
+
+@media only screen and (min-width: 1230px) {
+    .body-contain-dark {
+        background: linear-gradient(to bottom, var(--dark-top-BG-pattern) 24%, var(--dark-BG) 26% 100%);
+    }
+
+    .body-contain-light {
+        background: linear-gradient(to bottom, var(--light-top-BG-pattern) 24%, var(--light-BG) 26% 100%);
+    }
+}
+
+.dark-font-h1 {
+    color: #fff;
+}
+
+.light-font-h1 {
+    color: #000;
+}
+
+.dark-font-p {
+    color: #fff;
+}
+
+.light-font-p {
+    color: var(--light-text);
+}
+
+/* -------------------------------- */
+
+body {
+    height: 100%;
 }
 
 .header {
@@ -52,16 +91,13 @@ body {
 }
 
 .social-media {
-    color: #fff;
     font-family:  var(--unique-font);
     margin: 0rem 0 -0.1rem 0;
     font-size: 2.2rem;
 }
 
 .followers {
-    color: var(--dark-text);
     margin: -0.5rem 0 0 0;
-    font-family:  var(--unique-font);
     font-size: 1rem;
 }
 
@@ -81,7 +117,6 @@ body {
     font-family: var(--unique-font);
     font-size: 1.2rem;
     font-weight: 400;
-    color: #fff;
 }
 
 @media only screen and (max-width: 800px) {
@@ -162,57 +197,57 @@ main {
     margin: 1rem 0.5rem;
     border-radius: 5px;
     padding: 2rem 5rem;
-    background: #252a41;
+    /* --dark-card-BG */
+    /* --light-card-BG */
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.card:hover {
+.card-bg-light {
+    background: var(--light-card-BG);
+}
+
+.card-bg-light:hover {
+    background: var(--light-hover);
     cursor: pointer;
-    background: #293258;
     transition: all 0.5s ease-in-out;
 }
 
-.border-top-facebook {
+.card-bg-dark {
+    background: var(--dark-card-BG);
+}
+
+.card-bg-dark:hover {
+    background: var(--dark-hover);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.border-top {
     position: absolute;
     width: 15rem;
     height: 7px;
     border-radius: 5px 5px 0 0;
-    background-color: var(--facebook);
-    margin-top: -1.9rem;
+    margin-top: -2rem;
     margin-left: 0;
 }
 
-.border-top-twitter {
-    position: absolute;
-    width: 15rem;
-    height: 7px;
-    border-radius: 5px 5px 0 0;
-    background-color: var(--twitter);
-    margin-top: -1.9rem;
-    margin-left: 0;
+.top-facebook {
+    background: var(--facebook);
 }
 
-.border-top-instagram {
-    position: absolute;
-    width: 15rem;
-    height: 7px;
-    border-radius: 5px 5px 0 0;
+.top-twitter {
+    background: var(--twitter);
+}
+
+.top-youtube {
+    background: var(--youTube);
+}
+
+.top-instagram {
     background: var(--instagram);
-    margin-top: -1.9rem;
-    margin-left: 0;
-}
-
-.border-top-youtube {
-    position: absolute;
-    width: 15rem;
-    height: 7px;
-    border-radius: 5px 5px 0 0;
-    background-color: var(--youTube);
-    margin-top: -1.9rem;
-    margin-left: 0;
 }
 
 .user {
@@ -248,11 +283,11 @@ main {
 
 .symbol {
     font-size: 1.1rem;
-    color: var(--dark-text);
+    color: var(--light-text);
 }
 
 .social-user-facebook {
-    color: var(--dark-text);
+    color: var(--light-text);
     font-family: var(--unique-font);
     font-size: 0.8rem;
     text-transform: capitalize;
@@ -260,14 +295,14 @@ main {
 }
 
 .social-user {
-    color: var(--dark-text);
+    color: var(--light-text);
     font-family: var(--unique-font);
     font-size: 0.8rem;
     text-transform: capitalize;
 }
 
 .number {
-    color: var(--dark-text-number);
+    color: var(--light-text-number);
     font-family: var(--unique-font);
     margin-top: -3rem;
 }
@@ -281,7 +316,7 @@ main {
     text-transform: uppercase;
     margin-top: -3rem;
     letter-spacing: 0.5rem;
-    color: var(--dark-text);
+    color: var(--light-text);
 }
 
 .today {
@@ -320,9 +355,8 @@ main {
     font-family: var(--unique-font);
 }
 
-.overview-title {
+.title {
     font-family: var(--unique-font);
-    color: #fff;
 }
 
 .card-overview {
@@ -331,16 +365,9 @@ main {
     margin: 1rem 0.5rem;
     border-radius: 5px;
     padding: 2rem 5rem;
-    background: #252a41;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.card-overview:hover {
-    cursor: pointer;
-    background: #293258;
-    transition: all 0.5s ease-in-out;
 }
 
 .description-overview {
@@ -353,7 +380,6 @@ main {
 
 .pages-description {
     font-family: var(--unique-font);
-    color: var(--dark-text);
     font-weight: bold;
     word-spacing: -5px;
 }
@@ -369,7 +395,7 @@ main {
 .number-overview {
     font-size: 2rem;
     font-family: var(--unique-font);
-    color: #fff;
+    font-weight: 700;
 }
 
 .icon-number {
